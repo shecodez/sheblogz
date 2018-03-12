@@ -1,0 +1,21 @@
+.about-page {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+
+  .page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .large-letter {
+    font-size: 56px;
+    color: $primary;
+  }
+
+  span {
+    font-style: italic;
+  }
+}
