@@ -1,0 +1,27 @@
+.header {
+  .logo {
+    filter: invert(1);
+    margin: 34px 0 28px;
+  }
+
+  .ui.menu {
+    margin: 0 0 0.85rem;
+    min-height: inherit;
+
+    .item {
+      padding: 16px 5px 0;
+      text-transform: capitalize;
+      border-top: 1px solid transparent;
+      transition: all 600ms cubic-bezier(.23, 1, .32, 1);
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .active.item {
+      border-top: 1px solid $primary;
+      color: $primary;
+    }
+  }
+}
