@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Play:400,700");
 /*========================== mixins, variables, etc ==========================*/
 /*================================== global ==================================*/
 html {
@@ -5,7 +6,11 @@ html {
 
 body > #root > .App {
   min-height: 100%;
-  overflow: hidden; }
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: "Play", sans-serif;
+  display: flex;
+  flex-direction: column; }
 
 hr {
   border: 0;
@@ -73,24 +78,147 @@ a {
     border-top: 1px solid #fda626;
     color: #fda626; }
 
-.footer h6 {
-  margin: 10px 5px; }
+.footer {
+  margin-bottom: 34px; }
+  .footer h6 {
+    margin: 10px 5px;
+    font-size: 0.85em; }
+  .footer .ui.menu {
+    margin: 0 0 0.85rem;
+    min-height: inherit; }
+    .footer .ui.menu .item {
+      padding: 0 5px;
+      text-transform: capitalize; }
+  .footer .squares span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #fda626; }
+    .footer .squares span:hover {
+      background: transparent;
+      outline: 2px solid #fda626; }
+  .footer .squares span:nth-child(2) {
+    margin: 0 14px; }
 
-.footer .ui.menu {
-  margin: 0 0 0.85rem;
-  min-height: inherit; }
-  .footer .ui.menu .item {
-    padding: 0 5px;
-    text-transform: capitalize; }
+/*Chris Coyier <https://css-tricks.com/glitch-effect-text-images-svg/>*/
+/*
+  (TEXT) PARAMS
+  =================
+  1. Namespace
+  2. Intensity
+  3. Text color
+  4. Background color (flat)
+  5. Highlight #1 color
+  6. Highlight #2 color
+  7. Width (px)
+  8. Height (px)
+*/
+.home-page {
+  display: flex !important;
+  flex-direction: column;
+  min-height: 100vh;
+  /*
+    (TEXT) PARAMS
+    =================
+    1. Namespace
+    2. Intensity
+    3. Text color
+    4. Background color (flat)
+    5. Highlight #1 color
+    6. Highlight #2 color
+    7. Width (px)
+    8. Height (px)
+  */ }
+  .home-page .page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+  .home-page h1 {
+    font-size: 12em;
+    color: #fda626; }
+  .home-page p {
+    font-size: 2em; }
+  .home-page span {
+    background-color: black; }
+  .home-page .glitch {
+    font-size: 32px;
+    color: white;
+    position: relative; }
 
-.footer .squares span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background: #fda626; }
-  .footer .squares span:hover {
-    background: transparent;
-    outline: 2px solid #fda626; }
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(28px, 160px, 11px, 0); }
+  8.33333% {
+    clip: rect(11px, 160px, 10px, 0); }
+  16.66667% {
+    clip: rect(39px, 160px, 2px, 0); }
+  25% {
+    clip: rect(5px, 160px, 17px, 0); }
+  33.33333% {
+    clip: rect(32px, 160px, 37px, 0); }
+  41.66667% {
+    clip: rect(19px, 160px, 22px, 0); }
+  50% {
+    clip: rect(37px, 160px, 30px, 0); }
+  58.33333% {
+    clip: rect(34px, 160px, 1px, 0); }
+  66.66667% {
+    clip: rect(4px, 160px, 16px, 0); }
+  75% {
+    clip: rect(40px, 160px, 28px, 0); }
+  83.33333% {
+    clip: rect(13px, 160px, 16px, 0); }
+  91.66667% {
+    clip: rect(35px, 160px, 16px, 0); }
+  100% {
+    clip: rect(16px, 160px, 39px, 0); } }
 
-.footer .squares span:nth-child(2) {
-  margin: 0 14px; }
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(28px, 160px, 8px, 0); }
+  8.33333% {
+    clip: rect(26px, 160px, 6px, 0); }
+  16.66667% {
+    clip: rect(25px, 160px, 14px, 0); }
+  25% {
+    clip: rect(9px, 160px, 20px, 0); }
+  33.33333% {
+    clip: rect(1px, 160px, 15px, 0); }
+  41.66667% {
+    clip: rect(40px, 160px, 38px, 0); }
+  50% {
+    clip: rect(36px, 160px, 20px, 0); }
+  58.33333% {
+    clip: rect(38px, 160px, 11px, 0); }
+  66.66667% {
+    clip: rect(17px, 160px, 25px, 0); }
+  75% {
+    clip: rect(39px, 160px, 1px, 0); }
+  83.33333% {
+    clip: rect(24px, 160px, 23px, 0); }
+  91.66667% {
+    clip: rect(39px, 160px, 4px, 0); }
+  100% {
+    clip: rect(27px, 160px, 31px, 0); } }
+    .home-page .glitch:before, .home-page .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      width: 100%;
+      background: black;
+      clip: rect(0, 0, 0, 0); }
+    .home-page .glitch:after {
+      left: 2px;
+      text-shadow: -1px 0 #00c4cf;
+      animation: glitch-anim-1 2s infinite linear alternate-reverse; }
+    .home-page .glitch:before {
+      left: -2px;
+      text-shadow: 2px 0 #fda626;
+      animation: glitch-anim-2 3s infinite linear alternate-reverse; }
+  .home-page .tb-outline {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 0.5em 0;
+    border-top: 2px solid #fda626;
+    border-bottom: 2px solid #fda626;
+    display: inline-block; }

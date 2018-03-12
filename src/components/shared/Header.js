@@ -6,7 +6,7 @@ import logo from './../../assets/images/logo.png';
 
 class Header extends React.Component {
 	state = {
-		activeItem: '',
+		activeItem: this.props.page,
 		menuItems: [
 			{ name: 'home', route: '/' },
 			{ name: 'about', route: '/about' },
