@@ -1,0 +1,22 @@
+.gallery-page {
+  min-height: 100vh;
+
+  .ui.grid.main {
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  .thumbs-col {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 3em 0 1.75em;
+  }
+
+  .footer {
+    padding: 2.25em 0 1em;
+    margin-bottom: 0;
+  }
+}

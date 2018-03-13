@@ -95,6 +95,9 @@ a {
 //-- Pages -------------------------------------------
 @import "./components/pages/homePage";
 @import "./components/pages/aboutPage";
-//@import "./components/pages/galleryPage";
+@import "./components/pages/galleryPage";
 //@import "./components/pages/blogPage";
+//-- gallery -----------------------------------------
+@import "./components/gallery/thumbs";
+@import "./components/gallery/Viewer";
 //----------------------------------------------------

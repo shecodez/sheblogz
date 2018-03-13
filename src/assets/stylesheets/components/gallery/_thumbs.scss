@@ -1,0 +1,55 @@
+.thumbs {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em 0 1.75em;
+
+  .grid {
+    overflow-y: scroll;
+    height: 306px;
+  }
+
+  .column {
+    min-height: 102px;
+    padding: 0 !important;
+  }
+
+  .thumbnail {
+    display: inline-block;
+    position: relative;
+    max-height: 102px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: solid 10px rgba(255,255,255,.5);
+  }
+  .active:hover::after {
+    border: none;
+    transition: none;
+  }
+
+  .thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: border-width 0.1s ease;
+  }
+  .thumbnail:hover::after {
+    border: solid 10px rgba(255,255,255,.5);
+  }
+}
