@@ -1,0 +1,24 @@
+.blog-page {
+  min-height: 100vh;
+  display: flex !important;
+  flex-direction: column;
+
+  .welcome {
+    margin: 30px 0 70px 0;
+    span {
+      font-style: italic;
+    }
+  }
+
+  .page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .pagination {
+    text-align: center;
+  }
+}

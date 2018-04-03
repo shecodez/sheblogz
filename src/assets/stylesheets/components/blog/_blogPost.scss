@@ -1,0 +1,23 @@
+.blog-post {
+
+  .post {
+    text-align: center;
+    margin: 70px;
+  }
+
+  .feature-image {
+    margin: 40px 0;
+  }
+
+  .post-body {
+    margin: 50px;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .post-body {
+    margin: 50px 0 !important;
+  }
+}

@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux';
 
-// import locale from './locale';
-import blog from './blog';
+import blog from './blog/reducer';
 
 export default combineReducers({
-	// locale,
 	blog
 });

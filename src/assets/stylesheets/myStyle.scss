@@ -92,12 +92,16 @@ a {
 //-- Shared ------------------------------------------
 @import "./components/shared/header";
 @import "./components/shared/footer";
+@import "./components/shared/scrollUpButton";
 //-- Pages -------------------------------------------
 @import "./components/pages/homePage";
 @import "./components/pages/aboutPage";
 @import "./components/pages/galleryPage";
-//@import "./components/pages/blogPage";
+@import "./components/pages/blogPage";
 //-- gallery -----------------------------------------
 @import "./components/gallery/thumbs";
 @import "./components/gallery/Viewer";
+//-- blog --------------------------------------------
+@import "./components/blog/blogItem";
+@import "./components/blog/blogPost";
 //----------------------------------------------------

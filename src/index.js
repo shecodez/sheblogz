@@ -8,18 +8,35 @@ import './assets/stylesheets/myStyle.css';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 
+import withGA from './components/shared/withGA';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+require('dotenv').config(); // { path: './../.env' }
+
 const store = configureStore();
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={store}>
-		  <Route component={App} />
-    </Provider>
-	</BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+		  <Route component={withGA(App)} />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root')
 );
 registerServiceWorker();
+
+/*
+<BrowserRouter history={createBrowserHistory()}>
+	<Route path="/" component={App}>
+		<IndexRoute component={HomePage} />
+		<Route path="/about" component={AboutPage} />
+		<Route path="/gallery" component={GalleryPage} />
+		<Route path="/blog" component={BlogPage}>
+			<Route path="/blog/:slug" component={BlogPost} />
+		</Route>
+	</Route>
+	<Route path="*" component={NotFoundPage} />
+</BrowserRouter>
+*/

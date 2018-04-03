@@ -9,11 +9,11 @@ const Thumbs = ({ images, index, setCurrent }) => {
 			<Grid columns={2} padded>
 				{images.map((image, i) => (
 					<Grid.Column
-						key={image.link}
+						key={image.id}
 						className={index === i ? 'active thumbnail' : 'thumbnail'}
 						onClick={() => setIndex(i)}
 					>
-						<Image src={image.media.m} />
+						<Image src={image.src} />
 					</Grid.Column>
 				))}
 			</Grid>

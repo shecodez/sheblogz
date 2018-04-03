@@ -5,7 +5,7 @@ const Viewer = ({ image, next, prev }) => {
 		position: 'absolute',
 		top: '0', bottom: '0', left: '0', right: '0',
 		height: '100vh',
-		backgroundImage: `url(${image.media.m})`,
+		backgroundImage: `url(${image.src})`,
 		backgroundSize: 'cover',
 		backgroundPosition: 'center'
 	};
@@ -24,7 +24,7 @@ const Viewer = ({ image, next, prev }) => {
 
 			<div className="caption">
 				<h2>{image.title}</h2>
-				<p>{image.tags}</p>
+				<p>{image.description}</p>
 			</div>
 		</div>
 	);
