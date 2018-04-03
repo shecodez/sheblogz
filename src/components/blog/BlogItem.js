@@ -51,11 +51,7 @@ const BlogItem = props => (
 			<Grid.Column width={9}>
 				<Markdown
 					className="post-excerpt"
-					source={props.body
-						.split(' ')
-						.splice(0, 25)
-						.join(' ')
-						.concat('...')}
+					source={props.excerpt}
 				/>
 				<Link
 					className="primary"
@@ -71,3 +67,10 @@ const BlogItem = props => (
 	</Container>
 );
 export default BlogItem;
+
+/*
+<Markdown
+	className="post-excerpt"
+	source={props.body.split(' ').splice(0, 25).join(' ').concat('...')}
+/>
+ */
